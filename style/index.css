@@ -162,7 +162,7 @@ button {
     font-size: 16px;
     border-radius: 10px;
     margin-top: 40px;
-    box-shadow: 0 0.5rem 1.125rem -0.5rem rgba(248, 138, 102, 0.9);
+    box-shadow: 0 0.5rem 1.125rem -0.5rem rgba(248, 129, 89, 0.9);
     color: var(--app-button-text-color);
     background-color: var(--app-button-background-color);
     transition: all 0.25s ease-in-out;
@@ -322,12 +322,10 @@ button:hover {
     transition: 0.5s;
   }
 
-  .board:hover {
-    background-color: var(--app-button-background-color) ;
-  }
+
   
-  .board:hover .ikon-wrapper {
-    background-color: #ffffff;
+  .board:hover  {
+    background-color: #56565678;
     color: var(--app-button-hover-text-color);
   }
 
