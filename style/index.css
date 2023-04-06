@@ -1,0 +1,468 @@
+@import url(reset.css);
+
+:root {
+    --app-body-background-color: #fff;
+    --app-body-text-color: #565656; 
+    --app-body-box-shadow: 0 0.275rem 1.25rem rgb(11 15 25 / 5%), 0 0.25rem 0.5625rem rgb(11 15 25 / 3%);
+    --app-gray-section: #f3f6ff;
+    --app-title-color: #343541;
+    --app-header-background-color: #fff;
+    --app-header-text-color: #0b0f19;
+    --app-header-menu-text-color: #33354d;
+    --app-button-background-color: #ff5c4d;
+    --app-button-text-color: #fff;
+    --app-button-hover-background-color: #c7382b;
+    --app-button-hover-text-color: #fff;   
+    --app-footer-background-color: #343541;
+    --app-footer-text-color: #fff;
+}
+
+body {
+    background-color: var(--app-body-background-color);
+    color: var(--app-body-text-color);
+}
+
+/* ------------------------------- */
+/* CSS Page Container              */
+/* ------------------------------- */
+
+.container {
+    width: min(100% - 30px, 1080px);
+    margin-inline: auto;
+}
+
+/* ------------------------------- */
+/* HEADER                           */
+/* ------------------------------- */
+
+main {
+    height: auto;
+}
+
+header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color:var(--app-header-background-color);
+    height: 76px;
+    width: 100%;
+    z-index: 95;
+}
+
+header .flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .title {
+    line-height: 76px;
+    text-align: center;
+    vertical-align:middle;
+    color: var(--app-header-text-color);
+    text-decoration: none;
+}
+
+header .title h1 {
+    color: var(--app-header-text-color);
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 0.2px;
+    line-height: 76px;
+    margin-left: 5px;
+}
+
+nav {
+    transition: all 0.25s ease-out;
+}
+
+nav ul li {
+    display: inline;
+    line-height: 76px;
+}
+
+nav ul li a, .navbar i {
+    color: var(--app-header-menu-text-color);
+    /*line-height: 76px;*/
+    font-size: 17px;
+    font-weight: 500;
+    text-decoration: none;
+    letter-spacing: 0.2px;
+    transition: all 0.25s ease-in-out;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.navbar i {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 76px;
+}
+
+nav ul li a:hover { 
+    color: var(--app-button-background-color);
+}
+
+.scrolled {
+    animation: all .25s ease-in-out;
+    box-shadow: var(--app-body-box-shadow);
+}
+
+
+/* ------------------------------- */
+/* Main - Hero banner              */
+/* ------------------------------- */
+
+#hero-banner {
+    height: 100vh;
+    text-align: center; 
+    margin-top: 76px;
+    overflow: hidden; 
+    display: grid;
+    place-items: center;   
+    background: rgba(168, 168, 168, 1) url("../images/background-image.jpg") center center / cover no-repeat;
+    background-attachment: fixed;
+    background-blend-mode: multiply;  
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    text-align: center;
+    justify-content: center;
+    place-content: center;
+}
+
+.h-text {
+    display: flex;
+    place-content: center;
+    width: 60%;
+    color: var(--app-gray-section);
+    margin: auto;
+}
+
+h1.h-title {
+    font-size: 40px;
+    color: var(--app-body-background-color);
+}
+
+.about-text {
+    font-size: 18px;
+    font-weight: 500;
+    margin-top: 15px;
+}
+
+button {
+    height: 50px;
+    width: 170px; 
+    text-align: center;
+    letter-spacing: 0.2px;
+    font-weight: 600;
+    font-size: 16px;
+    border-radius: 10px;
+    margin-top: 40px;
+    box-shadow: 0 0.5rem 1.125rem -0.5rem rgba(248, 138, 102, 0.9);
+    color: var(--app-button-text-color);
+    background-color: var(--app-button-background-color);
+    transition: all 0.25s ease-in-out;
+  }
+  
+button:hover {
+    background-color: var(--app-button-hover-background-color);
+    color: var(--app-button-hover-text-color);
+    cursor: pointer;
+}
+
+.n-index a {
+    position:left;
+    color: var(--app-body-background-color);
+}
+
+.nav-media {
+    position: relative; 
+    height: 50px;
+    display: flex;
+    text-align: left;
+    justify-content: space-between;
+    position: center;
+    place-items: center;
+    line-height: 50px;
+    top: 20vh;
+}
+
+#icon1, .fa-solid {
+    font-size: 24px;
+    transition: all 0.25s ease-in-out;
+    color: var(--app-button-text-color);
+}
+
+#icon1:hover, .fa-solid:hover {
+    font-size: 30px;
+    color: var(--app-button-hover-text-color);
+}
+
+
+.btn-media + .btn-media {
+    margin-left: 15px;
+}
+
+.nav-contact a {
+    color: var(--app-button-text-color);
+    text-decoration: none;
+    font-size: 16px;
+    transition: all 0.25s ease-in-out;
+}
+
+.nav-contact a:hover {
+    font-size: 20px;
+    color: var(--app-button-hover-text-color);
+}
+
+
+[data-animation-offset] {
+    animation: trans 0.5s ease-in ;
+  }
+  
+  [data-animation-offset="first"] { animation-delay: 0.2s;}
+  [data-animation-offset="second"] { animation-delay: 0.3s;}
+  [data-animation-offset="third"] { animation-delay: 0.5s;}
+
+  
+  @keyframes trans {
+    from {
+        opacity: 0;
+        translate: -25px 0;
+        
+    } to {
+        opacity: 3;
+        translate: 0 0;
+    }
+  }
+
+
+/* ------------------------------- */
+/* SERVICES                       */
+/* ------------------------------- */
+
+#our-services {
+    width: 100%;
+    display: grid;
+    place-items: center;
+    background-color: var(--app-gray-section);
+    padding: 50px 0;
+  }
+
+#our-services h1 {
+    color: var(--app-title-color);
+}
+
+  .vertical {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .horizontal {
+    width: 100%;
+    padding: 0 1em 1em 1em;
+    text-align: center;
+  }
+
+  .board {
+    width: 100%;
+    height: 100%;
+    padding: 2em 1.5em;
+    background: var(--app-gray-section);
+    background-size: 100% 200%;
+    background-position: 0 2.5%;
+    border-radius: 5px;
+    box-shadow: 0 0 35px rgba(0, 0, 0, 0.12);
+    cursor: pointer;
+    transition: 0.5s;
+  }
+
+  .section-heading {
+    font-size: 30px;
+    font-weight: 800;
+    color: var(--app-title-color);
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  } 
+
+ 
+
+  .board-heading {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--app-title-color);
+    margin: 1em 0;
+  }
+
+
+  .horizontal .board-para {
+    color: var(--app-body-text-color);
+    font-size: 16px;
+    line-height: 1.6;
+    letter-spacing: 0.03em;
+    text-align: justify;
+  }
+  
+  .ikon-wrapper {
+    background-color: var(--app-button-background-color);
+    position: relative;
+    margin: auto;
+    font-size: 30px;
+    height: 2.5em;
+    width: 2.5em;
+    color: #ffffff;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    transition: 0.5s;
+  }
+
+  .board:hover {
+    background-color: var(--app-button-background-color) ;
+  }
+  
+  .board:hover .ikon-wrapper {
+    background-color: #ffffff;
+    color: var(--app-button-hover-text-color);
+  }
+
+  .board:hover .board-heading {
+    color: #ffffff;
+  }
+
+  .board:hover p {
+    color: #f0f0f0;
+  }
+
+  @media screen and (min-width: 768px) {
+    section {
+      padding: 0 2em;
+    }
+    .horizontal {
+      flex: 0 50%;
+      max-width: 50%;
+    }
+  }
+
+  @media screen and (min-width: 992px) {
+    section {
+      padding: 1em 3em;
+    }
+    .horizontal {
+      flex: 0 0 33.33%;
+      max-width: 33.33%;
+    }
+  }
+
+/* ------------------------------- */
+/* TRACKING                        */
+/* ------------------------------- */
+
+#map {
+    width: 100%;
+    height: 600px;
+    margin: 20px auto;
+    border-radius: 15px;
+}
+
+.track {
+    margin-top: 10px;
+}
+
+.btn-sharelocation {
+text-align: center;
+}
+
+.loader {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #333333;
+    transition: opacity 0.75s, visibility 0.75s;
+  }
+  
+  .loader--hidden {
+    opacity: 0;
+    visibility: hidden;
+  }
+  
+  .loader::after {
+    content: "";
+    width: 75px;
+    height: 75px;
+    border: 15px solid #dddddd;
+    border-top-color: var(--app-button-background-color);
+    border-radius: 50%;
+    animation: loading 0.75s ease infinite;
+  }
+  
+  @keyframes loading {
+    from {
+      transform: rotate(0turn);
+    }
+    to {
+      transform: rotate(1turn);
+    }
+  }
+  
+  
+/* ------------------------------- */
+/* FOOTER                           */
+/* ------------------------------- */
+
+footer {
+    width: 100%;
+    background-color: var(--app-footer-background-color);
+    color: var(--app-footer-text-color);
+    padding: 50px 0px;
+}
+
+footer .flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer .title {
+    line-height: 50px; 
+    display: flex;
+}
+
+footer .title h1 {
+    margin-left: 10px;
+    font-size: 22px;
+    color: var(--app-footer-text-color);
+    display: flex;
+}
+
+footer a {
+    text-decoration: none;
+    color: var(--app-footer-text-color);
+    line-height: 40px;
+}
+
+footer a:hover {
+    color: var(--app-button-background-color);
+}
+
+footer .row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0px;
+}
+
+footer .col {
+    width: calc(33% - 0px);
+}
+
+footer .copy p {
+    font-size: 16px;
+    font-weight: 400;
+}

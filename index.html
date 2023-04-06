@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="authors" content="Deynni Almazan" />
+    <meta name="description" content="Quick Shipping Company" />
+    <meta name="keywords" content="html,css,web development, seo, services, projects" />
+    <title>Quick Shipping| Fast, safe and cheap</title>
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.13.0/mapbox-gl.css" rel="stylesheet">
+    <link 
+    rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" 
+    integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="shorcut icon" href="./images/2623659.png" type="image/S-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">     
+    <link rel="stylesheet" href="style/index.css" media="all">
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.13.0/mapbox-gl.js"></script>
+    <script src="./script/index.js" defer></script>
+    
+</head>
+<body>
+    <header class="scrolled">
+        <div class="container flex">
+            <a href="index.html" class="title flex">
+                <img src="./images/2623659.png" width="47" alt="logo">
+                <h1>Quick Shipping</h1>
+            </a>
+            <nav class="nav">
+                <ul>
+                    <li><a href="index.html" target="_self">Home</a></li>
+                    <li><a href="index.html#our-services" target="_self">Services</a></li>
+                    <li><a href="index.html#tracking" target="_self">Tracking</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section id="hero-banner">
+            <div class="container">
+                <div class="h-text">
+                    <div class="content">
+                        <div class="animation one" data-animation-offset="first"> 
+                            <h1 class="h-title">
+                                Shipping solutions for all your needs
+                            </h1>
+                        </div>
+                        <div class="animation two" data-animation-offset="second"> 
+                            <p class="about-text">
+                                Reliable, innovative, and cost-effective shipping 
+                                solutions for you and your business.
+                            </p>
+                        </div>
+                            <div class="animation two" data-animation-offset="third"> 
+                            <a href="#our-services">
+                                <button class= h-button>Services</button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="our-services">
+            <div class="container">
+                <div>
+                    <h2 class="section-heading">Our Services</h2>
+                </div>
+                <div class="vertical">
+                    <div class="horizontal">
+                        <div class="board">
+                            <div class="ikon-wrapper">
+                            <i class="fas fa-rocket"></i>
+                            </div>
+                            <h3 class="board-heading">Courier</h3>
+                            <p class="board-para">
+                                Quick Shipping collaborates with the best carriers 
+                                in Canada to make sure your shipments get the 
+                                shortest transit times at the lowest possible 
+                                rates.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="horizontal">
+                        <div class="board">
+                            <div class="ikon-wrapper">
+                            <i class="fas fa-computer"></i>
+                            </div>
+                            <h3 class="board-heading">Air Freight</h3>
+                            <p class="board-para">
+                                Quick Shipping collaborates with some of the 
+                                world's largest airlines to deliver your packages 
+                                all over the globe.Our team's expertise in customs 
+                                and our partners' strong relationships with 
+                                airports around the world guarantee that your 
+                                air freight shipment will reach its destination 
+                                quickly and safely.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="horizontal">
+                        <div class="board">
+                            <div class="ikon-wrapper">
+                                <i class="fas fa-mobile-android-alt"></i>
+                            </div>
+                            <h3 class="board-heading">eCommerce</h3>
+                            <p class="board-para"> 
+                                Connect your web store with Quick Shipping and get 
+                                a fully-integrated shipping solution. We 
+                                collaborate with all the major eCommerce platforms 
+                                in the world to provide a seamless shopping 
+                                experience for your customers. 
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </section>
+        <section id="tracking">
+            <div class="container">
+                <div>
+                    <h2 class="section-heading">Track your packages</h2>
+
+                    <p class="about-text">
+                        Be confident with our services. Quick Shipping make 
+                        tracking available for every step of a package's journey.
+                    </p>
+                    <div class="btn-sharelocation">
+                        <button class="tracking-btn">Share location</button>
+                    </div>
+                    
+                </div>
+                <div id="map">
+                    <div class="loader"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="container row">
+            <div class="logo col">
+                <a href="index.html" class="title">
+                    <img src="./images/2623659.png" width="60" alt="logo">
+                    <h1>Quick Shipping</h1>
+                </a>
+            </div>
+            <div class="links col">
+                <h3>Menu</h3>
+                <ul>
+                    <li><a href="index.html" target="_self">Home</a></li>
+                    <li><a href="index.html#our-services" target="_self">Services</a></li>
+                    <li><a href="index.html#tracking" target="_self">Tracking</a></li>
+                </ul>
+            </div>
+            <div class="copy col">
+                <p>Copyright &copy; 2023  </p>
+                <p>Quick Shipping. All Rights Reserved.</p>
+                <p>Created by: Deynni Almazan</p>
+            </div>
+        </div>
+    </footer>
+    
+</body>
+</html>
